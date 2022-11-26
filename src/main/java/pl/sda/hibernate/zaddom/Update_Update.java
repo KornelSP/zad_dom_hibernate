@@ -3,7 +3,7 @@ package pl.sda.hibernate.zaddom;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class Create_Insert {
+public class Update_Update {
     public static void main(String[] args) {
 
         // wywołaj try-with-resources który zamknie sesję automatycznie po opuszczeniu try
@@ -12,15 +12,16 @@ public class Create_Insert {
 
             // Tworzymy Pojazd
             Pojazd pojazd = Pojazd.builder()
-                    .marka("Fiat")
-                    .moc(50d)
-                    .kolor("Srebrny")
-                    .rokProdukcji(2001)
-                    .elektryczny(false)
+                    .marka("Skoda")
+                    .moc(62d)
+                    .kolor("Zielony")
+                    .rokProdukcji(2010)
+                    .elektryczny(true)
+                    .id(2L)
                     .build();
 
             // zapisujemy pojazd
-            session.persist(pojazd);
+            session.merge(pojazd);
 
             // zatwierdzamy transakcję
             transaction.commit();
