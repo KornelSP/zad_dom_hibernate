@@ -1,4 +1,4 @@
 package pl.sda.hibernate.zaddom;
 
-public class Mine {
+public class Main {
 }
