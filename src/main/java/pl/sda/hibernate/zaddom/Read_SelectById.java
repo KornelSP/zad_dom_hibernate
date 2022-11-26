@@ -2,7 +2,7 @@ package pl.sda.hibernate.zaddom;
 
 import org.hibernate.Session;
 
-public class Read_CelectById { public static void main(String[] args) {
+public class Read_SelectById { public static void main(String[] args) {
     // wywołaj try-with-resources który zamknie sesję automatycznie po opuszczeniu try
     try (Session session = HibernateUtil.INSTANCE.getSessionFactory().openSession()) {
         Pojazd student = session.get(Pojazd.class, 2L);
