@@ -3,7 +3,7 @@ package pl.sda.hibernate.zaddom;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class MainCreate_Insert {
+public class Create_Insert {
     public static void main(String[] args) {
 
         // wywołaj try-with-resources który zamknie sesję automatycznie po opuszczeniu try
